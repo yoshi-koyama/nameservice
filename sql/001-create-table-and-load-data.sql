@@ -1,10 +1,11 @@
-DROP TABLE IF EXISTS names;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE names (
+CREATE TABLE users (
  id int unsigned AUTO_INCREMENT,
- name VARCHAR(20) NOT NULL,
+ name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL UNIQUE,
  PRIMARY KEY(id)
 );
 
-INSERT INTO names (name) VALUES ('john');
-INSERT INTO names (name) VALUES ('koyama');
+INSERT INTO users (name, email) VALUES ('yamada', 'yamada@example.com');
+
