@@ -31,7 +31,7 @@ class NameServiceTest {
     @Test
     public void 指定したIDの名前を取得できること() {
         // スタブの設定
-        doReturn(Optional.of(new Name(1, "Alice"))).when(nameMapper).findById(1);
+        doReturn(Optional.of(new Name(1, "Bob"))).when(nameMapper).findById(1);
 
         // テスト対象のメソッドを実行
         Name actual = nameService.findName(1);
