@@ -31,13 +31,13 @@ class NameServiceTest {
     @Test
     public void 指定したIDの名前を取得できること() {
         // スタブの設定
-        doReturn(Optional.of(new Name(1, "Alice"))).when(nameMapper).findById(1);
+        doReturn(Optional.of(new Name(1, "Bob"))).when(nameMapper).findById(1);
 
         // テスト対象のメソッドを実行
         Name actual = nameService.findName(1);
 
         // 実行結果を検証
-        assertThat(actual).isEqualTo(new Name(1, "Alice"));
+        assertThat(actual).isEqualTo(new Name(1, "Bob"));
 
         // スタブの呼び出しを検証
         verify(nameMapper, times(1)).findById(1);
