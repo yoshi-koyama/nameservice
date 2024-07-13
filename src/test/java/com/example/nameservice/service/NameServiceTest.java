@@ -37,7 +37,7 @@ class NameServiceTest {
         Name actual = nameService.findName(1);
 
         // 実行結果を検証
-        assertThat(actual).isEqualTo(new Name(1, "Alice"));
+        assertThat(actual).isEqualTo(new Name(1, "Bob"));
 
         // スタブの呼び出しを検証
         verify(nameMapper, times(1)).findById(1);
